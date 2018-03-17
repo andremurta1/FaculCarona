@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context="com.example.vinicius.faculcarona.MainActivity">
+
+    <ImageButton
+        android:id="@+id/botaoFacebookId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#11000000"
+        app:srcCompat="@drawable/facebook" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        app:srcCompat="@drawable/carro" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:text="FaculCarona"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/botaoGmailId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/botaoFacebookId"
+        android:layout_alignStart="@+id/botaoFacebookId"
+        android:layout_below="@+id/botaoFacebookId"
+        android:layout_marginTop="7dp"
+        android:background="#11000000"
+        android:contentDescription="TODO"
+        app:srcCompat="@drawable/google" />
+
+    <EditText
+        android:id="@+id/textoEmailId"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/botaoGmailId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/textoSenhaId"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/textoEmailId"
+        android:layout_alignStart="@+id/textoEmailId"
+        android:layout_below="@+id/textoEmailId"
+        android:layout_marginTop="7dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/botaoCadastrarId"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textoSenhaId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/botaoCadastrarId"
+            android:layout_alignLeft="@+id/botaoCadastrarId"
+            android:layout_alignStart="@+id/botaoCadastrarId">
+
+            <TextView
+                android:id="@+id/loginId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="ENTRAR AGORA"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/registrarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textoSenhaId"
+        android:layout_alignStart="@+id/textoSenhaId"
+        android:layout_alignTop="@+id/botaoCadastrarId"
+        android:layout_marginTop="65dp"
+        android:text="Inscreva-se" />
+
+    <TextView
+        android:id="@+id/esqueceuSenhaId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/registrarId"
+        android:layout_alignBottom="@+id/registrarId"
+        android:layout_alignEnd="@+id/textoSenhaId"
+        android:layout_alignRight="@+id/textoSenhaId"
+        android:text="Esqueceu a senha?" />
+
+</RelativeLayout>

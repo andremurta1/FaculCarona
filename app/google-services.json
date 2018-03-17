@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "536268413258",
+    "firebase_url": "https://faculcarona-b55bb.firebaseio.com",
+    "project_id": "faculcarona-b55bb",
+    "storage_bucket": "faculcarona-b55bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536268413258:android:0ef15100cc940ae3",
+        "android_client_info": {
+          "package_name": "com.example.vinicius.faculcarona"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536268413258-bu8o807e0ecp4712sc6iemr8vp69vmvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vinicius.faculcarona",
+            "certificate_hash": "b13ec3bfe715fb39f8578f13092f8ce6086ff7ee"
+          }
+        },
+        {
+          "client_id": "536268413258-cdpa3d3ok9dhugjm1a5bb6aijht2rsrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgEjXwDdytERfjTCIu9OmgO4a87fo2sbI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536268413258-cdpa3d3ok9dhugjm1a5bb6aijht2rsrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

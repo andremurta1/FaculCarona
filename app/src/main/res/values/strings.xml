@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FaculCarona</string>
+    <string name="cadastrar">CADASTRAR</string>
+    <string name="facebook_app_id">604210673250325</string>
+    <string name="fb_login_protocol_scheme">fb604210673250325</string>
+</resources>

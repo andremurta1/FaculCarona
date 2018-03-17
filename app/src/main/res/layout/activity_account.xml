@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vinicius.faculcarona.AccountActivity">
+
+    <TextView
+        android:id="@+id/bemVindoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="235dp"
+        android:text="Você está logado!"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/botaoSair"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bemVindoTexto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:background="@color/colorAccent"
+        android:text="sair"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:background="@android:color/holo_green_light"
+        app:srcCompat="@android:drawable/checkbox_on_background" />
+
+</RelativeLayout>
