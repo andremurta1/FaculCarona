@@ -1,7 +1,6 @@
 package com.example.vinicius.faculcarona;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,9 +10,10 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class AccountActivity extends AppCompatActivity {
+public class AccountActivity extends RegistreActivity {
 
     private Button botaoLogout;
+    private Button botaoCompCadastro;
     private FirebaseAuth mAuth;
 
     @Override
@@ -22,6 +22,7 @@ public class AccountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_account);
 
         botaoLogout = (Button) findViewById(R.id.botaoSair);
+        botaoCompCadastro = (Button) findViewById(R.id.botaoCompletarCadastro);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -35,6 +36,14 @@ public class AccountActivity extends AppCompatActivity {
 
                 updateUI();
 
+            }
+        });
+
+        botaoCompCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccountActivity.this, CadastroActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -5,10 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,14 +20,13 @@ public class RegistreActivity extends AppCompatActivity {
     private EditText textoSenha;
     private EditText textoEmail;
     private TextView cadastrar;
-    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registre);
 
-        cadastrar = (TextView) findViewById(R.id.cadastrarId);
+        cadastrar = (TextView) findViewById(R.id.botaoConcluir);
         textoEmail = (EditText) findViewById(R.id.textoEmailId);
         textoSenha = (EditText) findViewById(R.id.textoSenhaId);
 
@@ -40,10 +37,9 @@ public class RegistreActivity extends AppCompatActivity {
                 cadastro();
             }
         });
-
     }
 
-    private void cadastro() {
+   private void cadastro() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         if (!TextUtils.isEmpty(textoEmail.getText()) && !TextUtils.isEmpty(textoSenha.getText())) {
             Task<AuthResult> processo = auth.createUserWithEmailAndPassword(textoEmail.getText().toString(), textoSenha.getText().toString());
@@ -57,15 +53,11 @@ public class RegistreActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(RegistreActivity.this, "Falha ao cadastrar usuário", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             });
 
         } else {
             Toast.makeText(RegistreActivity.this, "Campos nulos", Toast.LENGTH_SHORT).show();
-
         }
-
     }
-
 }

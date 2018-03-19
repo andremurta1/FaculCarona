@@ -78,7 +78,7 @@
         android:inputType="textPassword" />
 
     <android.support.v7.widget.CardView
-        android:id="@+id/botaoCadastrarId"
+        android:id="@+id/botaoConcluir"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_below="@+id/textoSenhaId"
@@ -91,9 +91,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/botaoCadastrarId"
-            android:layout_alignLeft="@+id/botaoCadastrarId"
-            android:layout_alignStart="@+id/botaoCadastrarId">
+            android:layout_above="@+id/botaoConcluir"
+            android:layout_alignLeft="@+id/botaoConcluir"
+            android:layout_alignStart="@+id/botaoConcluir">
 
             <TextView
                 android:id="@+id/loginId"
@@ -114,7 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textoSenhaId"
         android:layout_alignStart="@+id/textoSenhaId"
-        android:layout_alignTop="@+id/botaoCadastrarId"
+        android:layout_alignTop="@+id/botaoConcluir"
         android:layout_marginTop="65dp"
         android:text="Inscreva-se" />
 

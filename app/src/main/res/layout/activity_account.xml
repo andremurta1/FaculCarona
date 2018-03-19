@@ -21,11 +21,25 @@
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/bemVindoTexto"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="79dp"
+        android:layout_marginBottom="41dp"
         android:background="@color/colorAccent"
         android:text="sair"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/botaoCompletarCadastro"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/botaoSair"
+        android:layout_alignLeft="@+id/botaoSair"
+        android:layout_alignStart="@+id/botaoSair"
+        android:layout_marginBottom="72dp"
+        android:background="@color/colorAccent"
+        android:text="COMPLETAR CADASTRO"
         android:textColor="@android:color/background_light"
         android:textStyle="bold" />
 
