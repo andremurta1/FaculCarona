@@ -41,7 +41,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
-                android:text="PRÓXIMA ETAPA"
+                android:text="COMPLETAR CADASTRO"
                 android:textColor="#fff"
                 android:textStyle="bold" />
         </RelativeLayout>
