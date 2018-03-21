@@ -43,7 +43,7 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/emailReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView9"
@@ -57,9 +57,9 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_alignBottom="@+id/emailReset"
+        android:layout_alignLeft="@+id/emailReset"
+        android:layout_alignStart="@+id/emailReset"
         android:layout_marginBottom="50dp"
         android:text="Endereço de email" />
 
@@ -68,7 +68,7 @@
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/emailReset"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
         android:background="@color/colorAccent"
