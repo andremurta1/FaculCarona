@@ -107,5 +107,17 @@
         android:hint="Sobrenome"
         android:inputType="textPersonName" />
 
+    <Button
+        android:id="@+id/addFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/cardView3"
+        android:layout_alignStart="@+id/cardView3"
+        android:layout_below="@+id/edtCelular"
+        android:layout_marginTop="11dp"
+        android:background="#11000000"
+        android:padding="10dp"
+        android:text="ADICIONAR FOTO DE PERFIL" />
+
 </RelativeLayout>
 

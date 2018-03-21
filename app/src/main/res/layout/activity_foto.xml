@@ -45,7 +45,6 @@
         android:background="#11000000"
         android:padding="10dp"
         android:text="CARREGAR UMA FOTO"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fotoPerfil" />
@@ -61,7 +60,6 @@
         android:background="#11000000"
         android:padding="10dp"
         android:text="TIRE UMA FOTO"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="304dp" />

@@ -70,4 +70,14 @@ public class AccountActivity extends RegistreActivity {
         finish();
 
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

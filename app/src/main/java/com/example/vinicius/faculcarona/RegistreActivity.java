@@ -39,7 +39,7 @@ public class RegistreActivity extends AppCompatActivity {
         });
     }
 
-   private void cadastro() {
+    private void cadastro() {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         if (!TextUtils.isEmpty(textoEmail.getText()) && !TextUtils.isEmpty(textoSenha.getText())) {
             Task<AuthResult> processo = auth.createUserWithEmailAndPassword(textoEmail.getText().toString(), textoSenha.getText().toString());
@@ -48,7 +48,7 @@ public class RegistreActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
                         Intent it = new Intent(RegistreActivity.this, AccountActivity.class);
-                        Toast.makeText(RegistreActivity.this, "Sucesso ao cadastrar usuário!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistreActivity.this, "Complete seu cadastro!", Toast.LENGTH_SHORT).show();
                         startActivity(it);
                     } else {
                         Toast.makeText(RegistreActivity.this, "Falha ao cadastrar usuário", Toast.LENGTH_SHORT).show();
@@ -59,5 +59,17 @@ public class RegistreActivity extends AppCompatActivity {
         } else {
             Toast.makeText(RegistreActivity.this, "Campos nulos", Toast.LENGTH_SHORT).show();
         }
+
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends AppCompatActivity {
 
+    private Button addFPerfil;
     private EditText edtNome;
     private EditText edtSobrenome;
     private EditText edtSexo;
@@ -31,6 +33,7 @@ public class CadastroActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
+        addFPerfil = findViewById(R.id.addFoto);
         gravar = findViewById(R.id.gravarId);
         edtNome = findViewById(R.id.edtNome);
         edtSobrenome = findViewById(R.id.edtSobrenome);
@@ -41,13 +44,22 @@ public class CadastroActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
+        addFPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CadastroActivity.this, FotoActivity.class);
+                startActivity(intent);
+            }
+        });
+
         gravar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gravar();
                 Intent it = new Intent(CadastroActivity.this, AccountActivity.class);
                 startActivity(it);
-                Toast.makeText(CadastroActivity.this, "Cadastro completo!", Toast.LENGTH_LONG).show();
+                Toast.makeText(CadastroActivity.this, "Cadastro completo!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CadastroActivity.this, "Bem vindo "+ edtNome.getText().toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -68,6 +80,16 @@ public class CadastroActivity extends AppCompatActivity {
         usuarios.child(uid).child("sexo").setValue(sexo);
         usuarios.child(uid).child("dataNasc").setValue(dataNasc);
         usuarios.child(uid).child("celular").setValue(celular);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
 

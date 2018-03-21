@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText textoEmail;
     private EditText textoSenha;
     private TextView registrar;
+    private TextView esqueceuSenha;
 
     private FirebaseAuth auth;
 
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         entrarAgora = findViewById(R.id.loginId);
         registrar = findViewById(R.id.registrarId);
+        esqueceuSenha = findViewById(R.id.esqueceuSenhaId);
         botaoFacebook = (ImageButton) findViewById(R.id.botaoFacebookId);
         botaoGmail = (ImageButton) findViewById(R.id.botaoGmailId);
 
@@ -109,6 +111,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
 
+        });
+
+        esqueceuSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, ResetActivity.class);
+                startActivity(intent);
+            }
         });
 
         // Initialize Facebook Login button
@@ -310,5 +321,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 signIn();
                 break;
         }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }
