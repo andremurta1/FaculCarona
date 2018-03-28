@@ -3,4 +3,23 @@
     <string name="cadastrar">CADASTRAR</string>
     <string name="facebook_app_id">604210673250325</string>
     <string name="fb_login_protocol_scheme">fb604210673250325</string>
+    <string-array name="array_vagas_carro">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+    </string-array>
+    <string-array name="array_origem">
+        <item>Asa Sul</item>
+        <item>Asa Norte</item>
+        <item>Ceilândia</item>
+    </string-array>
+    <string-array name="array_destino">
+        <item>Aguas Claras</item>
+        <item>Asa Sul</item>
+        <item>Asa Norte</item>
+        <item>Guará</item>
+        <item>São Sebastião</item>
+        <item>Taguatinga</item>
+    </string-array>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.vinicius.faculcarona;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -19,7 +21,7 @@ public class ResetActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private EditText resetEmail;
-    private Button redefinirSenha;
+    private TextView redefinirSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,8 @@ public class ResetActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(ResetActivity.this, "Link enviado com Sucesso!", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(ResetActivity.this, MainActivity.class);
+                                    startActivity(intent);
                                 } else {
                                     Toast.makeText(ResetActivity.this, "Email não encontrado!", Toast.LENGTH_SHORT).show();
                                 }

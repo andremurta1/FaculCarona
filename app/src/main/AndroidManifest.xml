@@ -43,7 +43,14 @@
         <activity android:name=".AccountActivity" />
         <activity android:name=".CadastroActivity" />
         <activity android:name=".ResetActivity" />
-        <activity android:name=".FotoActivity"></activity>
+        <activity android:name=".FotoActivity" />
+        <activity android:name=".PainelActivity" />
+        <activity android:name=".MeuCadastroActivity" />
+        <activity android:name=".SolicitarCaronaActivity" />
+        <activity android:name=".MinhasCaronasActivity" />
+        <activity android:name=".ConsultarMeuPerfilActivity" />
+        <activity android:name=".ConfirmarSerMotoristaActivity" />
+        <activity android:name=".OferecerCaronaActivity"></activity>
     </application>
 
 </manifest>

@@ -63,16 +63,34 @@
         android:layout_marginBottom="50dp"
         android:text="Endereço de email" />
 
-    <Button
-        android:id="@+id/botaoEnviarEmail"
-        style="@style/Widget.AppCompat.Button.Small"
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView1"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/emailReset"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="59dp"
-        android:background="@color/colorAccent"
-        android:text="enviar email de verificação"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold" />
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/cardView1"
+            android:layout_alignLeft="@+id/cardView1"
+            android:layout_alignStart="@+id/cardView1">
+
+            <TextView
+                android:id="@+id/botaoEnviarEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="ENVIAR EMAIL DE VERIFICAÇÃO"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

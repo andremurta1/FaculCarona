@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(firebaseAuth.getCurrentUser() != null){
 
-                    startActivity(new Intent(MainActivity.this, AccountActivity.class));
+                    startActivity(new Intent(MainActivity.this, PainelActivity.class));
 
                 }
 
@@ -136,6 +136,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onSuccess(LoginResult loginResult) {
                         Log.d(TAG, "facebook:onSuccess:" + loginResult);
                         handleFacebookAccessToken(loginResult.getAccessToken());
+                        Intent intent = new Intent(MainActivity.this, PainelActivity.class);
+                        startActivity(intent);
                     }
 
                     @Override
@@ -157,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         botaoGmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, AccountActivity.class));
+                startActivity(new Intent(MainActivity.this, PainelActivity.class));
             }
         });
 
@@ -201,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Toast.makeText(MainActivity.this, "Você está logado!", Toast.LENGTH_SHORT).show();
 
-        Intent accountIntent = new Intent(MainActivity.this, AccountActivity.class);
+        Intent accountIntent = new Intent(MainActivity.this, PainelActivity.class);
         startActivity(accountIntent);
         finish();
 
@@ -299,7 +301,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Intent it = new Intent(MainActivity.this, AccountActivity.class);
+                        Intent it = new Intent(MainActivity.this, PainelActivity.class);
                         startActivity(it);
                     } else {
                         Toast.makeText(MainActivity.this, "Erro, e-mail ou senha inválidos!", Toast.LENGTH_SHORT).show();

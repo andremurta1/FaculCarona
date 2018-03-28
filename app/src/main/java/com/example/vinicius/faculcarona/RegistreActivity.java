@@ -47,7 +47,7 @@ public class RegistreActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Intent it = new Intent(RegistreActivity.this, AccountActivity.class);
+                        Intent it = new Intent(RegistreActivity.this, CadastroActivity.class);
                         Toast.makeText(RegistreActivity.this, "Complete seu cadastro!", Toast.LENGTH_SHORT).show();
                         startActivity(it);
                     } else {

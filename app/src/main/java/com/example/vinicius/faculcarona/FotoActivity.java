@@ -6,10 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class FotoActivity extends AppCompatActivity {
 
-    private Button tirarFoto;
+    private TextView tirarFoto;
     private final int REQUEST_IMAGE_CAPTURE = 999;
 
     public FotoActivity() {

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.login.LoginManager;
@@ -12,17 +13,17 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class AccountActivity extends RegistreActivity {
 
-    private Button botaoLogout;
-    private Button botaoCompCadastro;
-    private FirebaseAuth mAuth;
+    private TextView botaoLogout;
+    private TextView botaoCompCadastro;
+    public FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
-        botaoLogout = (Button) findViewById(R.id.botaoSair);
-        botaoCompCadastro = (Button) findViewById(R.id.botaoCompletarCadastro);
+        botaoLogout = (TextView) findViewById(R.id.botaoSair);
+        botaoCompCadastro = (TextView) findViewById(R.id.botaoCompletarCadastro);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -61,7 +62,7 @@ public class AccountActivity extends RegistreActivity {
 
     }
 
-    private void updateUI() {
+    public void updateUI() {
 
         Toast.makeText(AccountActivity.this, "Você está desconectado!", Toast.LENGTH_SHORT).show();
 

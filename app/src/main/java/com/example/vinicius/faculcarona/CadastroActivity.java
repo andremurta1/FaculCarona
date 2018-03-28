@@ -56,7 +56,7 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gravar();
-                Intent it = new Intent(CadastroActivity.this, AccountActivity.class);
+                Intent it = new Intent(CadastroActivity.this, PainelActivity.class);
                 startActivity(it);
                 Toast.makeText(CadastroActivity.this, "Cadastro completo!", Toast.LENGTH_SHORT).show();
                 Toast.makeText(CadastroActivity.this, "Bem vindo "+ edtNome.getText().toString(), Toast.LENGTH_LONG).show();

@@ -52,8 +52,8 @@
         android:layout_height="40dp"
         android:layout_below="@+id/textoSenhaId"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/colorAccent"
+        android:layout_marginTop="51dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="25dp"
         app:cardElevation="10dp">
 
@@ -83,17 +83,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
         app:srcCompat="@drawable/carro" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:text="Ao fazer o login complete seu cadastro!!"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
-        android:textStyle="bold" />
 
 </RelativeLayout>
