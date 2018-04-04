@@ -66,7 +66,8 @@ public class PainelActivity extends AccountActivity {
         gerarRota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.br/maps/dir/-15.8226983,-47.9843072/-15.8135732,-47.9639654/-15.8197578,-47.9085008/@-15.8208808,-48.0002344,13z"));
+                //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.br/maps/dir/-15.8226983,-47.9843072/-15.8135732,-47.9639654/-15.8197578,-47.9085008/@-15.8208808,-48.0002344,13z"));
+                Intent intent = new Intent(PainelActivity.this, MapaActivity.class);
                 startActivity(intent);
             }
         });
