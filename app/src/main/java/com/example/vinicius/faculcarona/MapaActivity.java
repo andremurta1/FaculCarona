@@ -17,9 +17,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
 public class MapaActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     public static final int MAP_PERMISSION_ACCESS_COURSE_LOCATION = 9999;
+    private LatLng minhaLocalizacao;
+    private String localizacaoEdt;
+
 
     private GoogleMap mMap;
     LocationManager locationManager;
@@ -42,31 +46,37 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED ) {
             ActivityCompat.requestPermissions( this, new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION}, MAP_PERMISSION_ACCESS_COURSE_LOCATION);
         } else {
-            getLastLocation();
             getLocation();
+            if(minhaLocalizacao == null){
+                getLastLocation();
+            }
+
         }
 
-        LatLng iesbSul = new LatLng(-15.7571194, -47.8788442);
-        mMap.addMarker(new MarkerOptions().position(iesbSul).title("IESB Sul"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(iesbSul, 15));
+        if(minhaLocalizacao != null) {
+
+            LatLng MeuLocal = new LatLng(minhaLocalizacao.latitude, minhaLocalizacao.longitude);
+            Double latitude = minhaLocalizacao.latitude;
+            Double longitude = minhaLocalizacao.longitude;
+            localizacaoEdt = latitude.toString()+','+longitude.toString();
+            ConsultarMeuPerfilActivity.LocalizacaoEdt.setText(localizacaoEdt);
+            mMap.addMarker(new MarkerOptions().position(MeuLocal).title("Meu Local de Origem"));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(MeuLocal, 15));
+        }
     }
 
     private void getLastLocation() {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED ) {
             Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-            LatLng me = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
-            mMap.addMarker(new MarkerOptions().position(me).title("Eu estava aqui quando o anrdoid me localizou pela última vez!!!"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(me, 10));
-        }
+            minhaLocalizacao = new LatLng(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
+            }
     }
 
     private void getLocation() {
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED ) {
             LocationListener locationListener = new LocationListener() {
                 public void onLocationChanged(Location location) {
-                    LatLng me = new LatLng(location.getLatitude(), location.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(me).title("Estou Aqui!!!"));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(me, 10));
+                    minhaLocalizacao = new LatLng(location.getLatitude(), location.getLongitude());
                 }
 
                 public void onStatusChanged(String provider, int status, Bundle extras) {
